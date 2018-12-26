@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://ultraq.net.nz/thymeleaf/layout" >
+<head>
+
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">Ticket reservation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/documentation/img/favicon.ico">
+
+    <meta http-equiv="Content-Security-Policy">
+    <link rel = "stylesheet" href="/documentation/css/bootstrap.min.css" th:href="@{/documentation/css/bootstrap.min.css}">
+    <link rel = "stylesheet" href="/documentation/css/style.css" th:href="@{/documentation/css/style.css}">
+    <link rel = "stylesheet" href="/documentation/css/tree-viewer.css" th:href="@{/documentation/css/tree-viewer.css}">
+
+
+    <link rel = "stylesheet" href="/assets/libs/css/style.css" th:href="@{/assets/libs/css/style.css}">
+</head>
+
+
+<body>
+<script th:src="@{/documentation/js/bootstrap.min.js}" src="/documentation/js/bootstrap.min.js"></script>
+<script th:src="@{/documentation/js/jquery-3.1.0.min.js}" src="/documentation/js/jquery-3.1.0.min.js"></script>
+<script th:src="@{/documentation/js/jstree.action.js}" src="/documentation/js/jstree.action.js"></script>
+<script th:src="@{/documentation/js/jstree.min.js}" src="/documentation/js/jstree.min.js"></script>
+
+
+<script th:src="@{/assets/libs/js/dashboard-ecommerce.js}" src="/assets/libs/js/dashboard-ecommerce.js"></script>
+<script th:src="@{/assets/libs/js/dashboard-finance.js}" src="/assets/libs/js/dashboard-finance.js"></script>
+<script th:src="@{/assets/libs/js/dashboard-influencer.js}" src="/assets/libs/js/dashboard-influencer.js"></script>
+<script th:src="@{/assets/libs/js/dashboard-sales.js}" src="/assets/libs/js/dashboard-sales.js"></script>
+<script th:src="@{/assets/libs/js/gmaps.min.js}" src="/assets/libs/js/gmaps.min.js"></script>
+<script th:src="@{/assets/libs/js/google_map.js}" src="/assets/libs/js/google_map.js"></script>
+<script th:src="@{/assets/libs/js/jvectormap.custom.js}" src="/assets/libs/js/jvectormap.custom.js"></script>
+<script th:src="@{/assets/libs/js/main-js.js}" src="/assets/libs/js/main-js.js"></script>
+
+
+<div th:replace="~{fragments/navbar.html :: main-navber}"></div>
+<div th:replace="~{fragments/left-sidenav.html :: left-navber}"></div>
+<div th:replace="~{fragments/footer.html :: copyright}"></div>
+
+<div class="content">
+    <div layout:fragment="custom-content">
+        <h1>Content Will go here</h1>
+    </div>
+</div>
+</body>
+</html>
