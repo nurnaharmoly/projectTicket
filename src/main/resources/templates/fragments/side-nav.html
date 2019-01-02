@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <body>
+
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" th:fragment="side-navbar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" th:href="@{/}">
+                        <span class="menu-title">Dashboard</span>
+                        <!--<span trainClass="menu-sub-title">( 2 new updates )</span>-->
+                        <i class="mdi mdi-home menu-icon"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#bmi" aria-expanded="false" aria-controls="bmi">
+                        <span class="menu-title">Role</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="bmi">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/role/create.jsf}" href="/role/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/role/list.jsf}" href="/role/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#booking" aria-expanded="false" aria-controls="booking">
+                        <span class="menu-title">Booking</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="booking">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/booking/create.jsf}" href="/booking/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/booking/list.jsf}" href="/booking/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#availableSeat" aria-expanded="false" aria-controls="availableSeat">
+                        <span class="menu-title">Available Seat</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="availableSeat">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/availableseat/create.jsf}" href="/availableseat/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/availableseat/list.jsf}" href="/availableseat/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#compartment" aria-expanded="false" aria-controls="compartment">
+                        <span class="menu-title">Compartment</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="compartment">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/compartment/create.jsf}" href="/compartment/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/compartment/list.jsf}" href="/compartment/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#fareCategory" aria-expanded="false" aria-controls="fareCategory">
+                        <span class="menu-title">Fare Category</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="fareCategory">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/fareCategory/create.jsf}" href="/fareCategory/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/fareCategory/list.jsf}" href="/fareCategory/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#reservation" aria-expanded="false" aria-controls="reservation">
+                        <span class="menu-title">Reservation</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="reservation">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/reservation/create.jsf}" href="/reservation/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/reservation/list.jsf}" href="/reservation/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#route" aria-expanded="false" aria-controls="route">
+                        <span class="menu-title">Route</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="route">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/route/create.jsf}" href="/route/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/route/list.jsf}" href="/route/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#scheduleTime" aria-expanded="false" aria-controls="scheduleTime">
+                        <span class="menu-title">scheduleTime</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="scheduleTime">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/scheduleTime/create.jsf}" href="/scheduleTime/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/scheduleTime/list.jsf}" href="/scheduleTime/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#seatOrCabin" aria-expanded="false" aria-controls="seatOrCabin">
+                        <span class="menu-title">Seat Or Cabin</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="seatOrCabin">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/seatOrCabin/create.jsf}" href="/seatOrCabin/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/seatOrCabin/list.jsf}" href="/seatOrCabin/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#seatDetails" aria-expanded="false" aria-controls="seatDetails">
+                        <span class="menu-title">Seat Details</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="seatDetails">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/seatDetails/create.jsf}" href="/seatDetails/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/seatDetails/list.jsf}" href="/seatDetails/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#station" aria-expanded="false" aria-controls="station">
+                        <span class="menu-title">Station</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="station">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/station/create.jsf}" href="/station/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/station/list.jsf}" href="/station/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#ticket" aria-expanded="false" aria-controls="ticket">
+                        <span class="menu-title">Ticket</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="ticket">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/ticket/create.jsf}" href="/ticket/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/ticket/list.jsf}" href="/ticket/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#train" aria-expanded="false" aria-controls="train">
+                        <span class="menu-title">Train</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="train">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/train/create.jsf}" href="/train/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/train/list.jsf}" href="/train/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#trainClass" aria-expanded="false" aria-controls="trainClass">
+                        <span class="menu-title">Train Class</span>
+                        <i class="menu-arrow"></i>
+                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                    </a>
+                    <div class="collapse" id="trainClass">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/trainClass/create.jsf}" href="/trainClass/create.jsf">Create</a></li>
+                            <li class="nav-item"> <a class="nav-link" th:href="@{/trainClass/list.jsf}" href="/trainClass/list.jsf">List</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </body>
+
+</html>
