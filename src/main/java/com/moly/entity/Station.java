@@ -13,6 +13,8 @@ public class Station {
 
 	private String adress;
 
-
+	@ManyToOne
+	@JoinColumn(name = "train_id")
+	private Train train;
 
 }

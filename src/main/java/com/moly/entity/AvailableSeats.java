@@ -16,9 +16,13 @@ public class AvailableSeats {
 
 	private int totalSeats;
 
-	//private  Train train;
+	@ManyToOne
+	@JoinColumn(name = "train_id")
+	private Train train;
 
-	//private  Compartment compartment;
+	@ManyToOne
+	@JoinColumn(name = "compartment_id")
+	private Compartment compartment;
 
 
 }

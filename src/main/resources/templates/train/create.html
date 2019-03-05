@@ -14,18 +14,56 @@
         <div class="col-12 stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Add New Role</h4>
+                    <h4 class="card-title">Add New Train</h4>
 
                     <form class="forms-sample" th:object="${obj}" method="post"
-                          th:action="@{/train/create.jsf}">
+                          >
                         <div class="form-group row">
-                            <label for="rolename" class="col-sm-3 col-form-label">Role Name</label>
+                            <label for="trainName" class="col-sm-3 col-form-label">Train Name</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="rolename" th:field="*{rolename}" required
-                                       placeholder="Enter Role Name">
+                                <input type="text" class="form-control" id="trainName"  required
+                                       placeholder="Enter Train Name">
 
                             </div>
                         </div>
+
+                        <div class="form-group row">
+                            <label for="trainNo" class="col-sm-3 col-form-label">Train No</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="trainNo"  required
+                                       placeholder="Enter Train No">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="sheduleTime_id" class="col-sm-3 col-form-label">Schedule Time_id</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="sheduleTime_id"  required
+                                       placeholder="Enter Schedule Time_id">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="route_id" class="col-sm-3 col-form-label">Route_id</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="route_id"  required
+                                       placeholder="Enter Route_id">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="station_id" class="col-sm-3 col-form-label">Station_id</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="station_id"  required
+                                       placeholder="Enter Station_id">
+
+                            </div>
+                        </div>
+
+
 
 
                         <button class="btn btn-success mr-2 float-right">Submit</button>

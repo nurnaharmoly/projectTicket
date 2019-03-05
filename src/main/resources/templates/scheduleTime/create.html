@@ -14,14 +14,14 @@
         <div class="col-12 stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Add New Role</h4>
+                    <h4 class="card-title">Add Schedule Time</h4>
 
                     <form class="forms-sample" th:object="${obj}" method="post"
                           >
                         <div class="form-group row">
                             <label for="startTime" class="col-sm-3 col-form-label">Start Time</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="startTime"  required
+                                <input type="time" class="form-control" id="startTime"  required
                                        placeholder="Enter Start Time">
 
                             </div>
@@ -30,7 +30,7 @@
                         <div class="form-group row">
                             <label for="arrivalTime" class="col-sm-3 col-form-label">Arrival Time</label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="arrivalTime"  required
+                                <input type="time" class="form-control" id="arrivalTime"  required
                                        placeholder="Enter Arrival Time">
 
                             </div>

@@ -10,14 +10,20 @@ public class Ticket {
 	private  Long id;
 
 	private String ticketCategore;
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
+	@ManyToOne
+	@JoinColumn(name = "fareCategore_id")
+	private FareCategory fareCategore;
+	@ManyToOne
+	@JoinColumn(name = "compartment_id")
+	private Compartment compartment;
 
-	//private User user;
-
-	//private FareCategory fareCategore;
-
-	//private  Compartment compartment;
-
-	//private  SeatOrCabin seatOrCabin;
-
-	//private Route route;
+	@ManyToOne
+	@JoinColumn(name = "seatOrCabin_id")
+	private  SeatOrCabin seatOrCabin;
+	@ManyToOne
+	@JoinColumn(name = "route_id")
+	private Route route;
 }

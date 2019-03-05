@@ -9,5 +9,5 @@ public class FareCategory {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 
-	private String fareCategoreName;
+	private String fareCategoreNo;
 }

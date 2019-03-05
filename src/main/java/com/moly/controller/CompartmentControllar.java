@@ -13,6 +13,7 @@ public class CompartmentControllar {
     @GetMapping(value = "create.jsf")
     public String displayCompartment(Model model){
         model.addAttribute("obj", new Compartment());
+
         return "compartment/create";
 
     }

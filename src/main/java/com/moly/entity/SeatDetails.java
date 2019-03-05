@@ -10,13 +10,18 @@ public class SeatDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 
-	//private Train train;
 
+	@ManyToOne
+	@JoinColumn(name = "train_id")
+	private Train train;
 
-	//private Compartment compartment;
+	@ManyToOne
+	@JoinColumn(name = "compartment_id")
+	private Compartment compartment;
 
-
-	//private SeatOrCabin seatOrCabin;
+	@ManyToOne
+	@JoinColumn(name = "seatOrCabin_id")
+	private SeatOrCabin seatOrCabin;
 
 
 	private Boolean status;

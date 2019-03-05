@@ -9,13 +9,19 @@ public class SeatOrCabin {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  Long id;
 
-	private String seatNo;
+	private int seatNo;
+
+	private int cabinNo;
 
 
 
-	//private Compartment compartment;
+	@ManyToOne
+	@JoinColumn(name = "compartment_id")
+	private Compartment compartment;
 
 
-   //private Class aClass;
+	@ManyToOne
+	@JoinColumn(name = "trainClass_id")
+	private TrainClass trainClass;
 
 }

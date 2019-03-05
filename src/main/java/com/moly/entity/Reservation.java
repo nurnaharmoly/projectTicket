@@ -18,14 +18,18 @@ public class Reservation {
 	private double unitPrice;
 
 	private Date journyDate;
-
-	//private Ticket ticket;
-
-	//private Compartment compartment;
-
-	//private Train train;
-
-	//private User user;
+	@ManyToOne
+	@JoinColumn(name = "ticket_id")
+	private Ticket ticket;
+	@ManyToOne
+	@JoinColumn(name = "compartment_id")
+	private Compartment compartment;
+	@ManyToOne
+	@JoinColumn(name = "train_id")
+	private Train train;
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
 
 
 

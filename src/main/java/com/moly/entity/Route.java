@@ -13,10 +13,10 @@ public class Route {
 
 	private String routeName;
 
-	@Temporal(TemporalType.TIME)
-	private Date stationFrom;
 
-	@Temporal(TemporalType.TIME)
-	private Date stationTo;
+	private String stationFrom;
+
+
+	private String stationTo;
 
 }
